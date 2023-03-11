@@ -5,68 +5,107 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <!-- <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 
 <body>
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__logo logo">
+        <a class="logo__link link" href="https://github.com/ElenaMihailova">
+          <p class="logo__text">by Elena Mihailova</p>
+          <img class="logo__img" src="./image/ava.jpg" width="50" height="50" alt="Логотип">
+        </a>
+      </div>
+      <div class="header__copyright copyright">
+        <a class="copyright__link link" href="https://vk.com/mushroomova">
+          <p class="copyright__text">Классные картинки нарисовала <span>Mushroomova</span></p>
+        </a>
+      </div>
+    </div>
+  </header>
   <main class="main">
-    <div class="main__container">
+    <div class="main__container container">
       <div class="main__content bayan">
         <h1 class="bayan__title">CSS bayan</h1>
         <div class="bayan__wrap">
           <div class="bayan__element element">
-            <h2 class="element__title">Отстань от себя</h2>
-            <button class="element__button"><span class="visually-hidden">Открыть</span></button>
+            <input id="ac1" name="accordion1" type="checkbox" checked>
+            <label for="ac1"><span>Отстань от себя</span>
+              <svg>
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </label>
             <div class="element__img">
               <img src="./image/img1.jpg" alt="Картинка с лягушкой" width="270" height="250">
             </div>
           </div>
+
           <div class="bayan__element element">
-            <h2 class="element__title">Уииии</h2>
-            <button class="element__button"><span class="visually-hidden">Открыть</span></button>
+            <input id="ac2" name="accordion2" type="checkbox">
+            <label for="ac2"><span>Зачем всем нравиться?</span>
+              <svg>
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </label>
             <div class="element__img">
               <img src="./image/img2.jpg" alt="Картинка с лягушкой" width="270" height="250">
             </div>
           </div>
+
           <div class="bayan__element element">
-            <h2 class="element__title">Делай напуганным</h2>
-            <button class="element__button"><span class="visually-hidden">Открыть</span></button>
+            <input id="ac3" name="accordion3" type="checkbox">
+            <label for="ac3"><span>Делай напуганным</span>
+              <svg>
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </label>
             <div class="element__img">
               <img src="./image/img3.jpg" alt="Картинка с лягушкой" width="270" height="250">
             </div>
           </div>
+
           <div class="bayan__element element">
-            <h2 class="element__title">Пробуй новое</h2>
-            <button class="element__button"><span class="visually-hidden">Открыть</span></button>
+            <input id="ac4" name="accordion4" type="checkbox">
+            <label for="ac4"><span>Пробуй новое</span>
+              <svg>
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </label>
             <div class="element__img">
               <img src="./image/img4.jpg" alt="Картинка с лягушкой" width="270" height="250">
             </div>
           </div>
+
           <div class="bayan__element element">
-            <h2 class="element__title">Дружи с собой</h2>
-            <button class="element__button"><span class="visually-hidden">Открыть</span></button>
+            <input id="ac5" name="accordion5" type="checkbox">
+            <label for="ac5"><span>Дружи с собой</span>
+              <svg>
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </label>
             <div class="element__img">
               <img src="./image/img5.jpg" alt="Картинка с лягушкой" width="270" height="250">
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </main>
-  <footer class="footer">
-    <div class="footer__copyright copyright">
-      <a class="copyright__link" href="https://vk.com/mushroomova">
-        <p class="copyright__text">Классные картинки рисует <span>Mushroomova</span></p>
-      </a>
-    </div>
-  </footer>
 
+  <svg class="visually-hidden">
+    <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-close" width="24" height="24">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M19.2 6.2a1 1 0 0 0-1.4-1.4L12 10.58l-5.8-5.8A1 1 0 0 0 4.8 6.2l5.78 5.8-5.8 5.8a1 1 0 1 0 1.42 1.4l5.8-5.78 5.8 5.8a1 1 0 0 0 1.4-1.42L13.42 12l5.8-5.8z" />
+    </symbol>
+  </svg>
 </body>
 
 </html>
