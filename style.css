@@ -53,6 +53,8 @@ body {
 
 .container {
     padding: 20px;
+    max-width: 1180px;
+    margin: 0 auto;
 }
 
 .link {
@@ -63,12 +65,18 @@ body {
 .element {
     padding-top: 20px;
     padding-bottom: 20px;
+    border-bottom: 2px solid #BF6C7D;
+}
+
+.element:first-of-type {
     border-top: 2px solid #BF6C7D;
+}
+
+label {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    
 }
 
 .bayan {
@@ -77,22 +85,17 @@ body {
     align-items: center;
 }
 
+.bayan__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+
+    @media (min-width: 768px) {
+        font-size: 32px;
+    }
+}
+
 .bayan__wrap {
     width: 100%;
-}
-
-.element input {
-    display: none;
-}
-
-.element label {
-    font-size: 24px;
-    line-height: 1.5;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    cursor: pointer;
 }
 
 .logo {
@@ -118,11 +121,6 @@ body {
     transition: color 0.6s;
 }
 
-.footer {
-    padding-bottom: 50px;
-    flex-shrink: 0;
-}
-
 .copyright {
     width: 50%;
     margin: 0 auto;
@@ -137,6 +135,20 @@ body {
     transition: color 0.6s;
 }
 
+.element input {
+    display: none;
+}
+
+.element__wrap {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
 .element__img img {
     border-radius: 30%;
 }
@@ -144,31 +156,36 @@ body {
 .element__img {
     height: 0;
     overflow: hidden;
-    transition: height 0,6s;
+    transition: height 0.3s;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.6s;
 }
 
-.element input:checked~.element__img {
-    height: 250px;
+.element__img:hover {
+    opacity: 0.5;
 }
 
-/* label:hover + .element__img {
-    height: 250px;
+input:checked~.element__img {
+    height: 300px;
+}
+
+/* label:hover .element__img {
+    height: 300px;
 } */
 
-.element input:checked~ label svg {
+/* label:hover .element__wrap svg {
     display: block;
-    /* transform: rotate(-45deg); */
+} */
+
+.element input:checked~.element__wrap svg {
+    display: block;
 }
 
-.element input:hover~ label svg {
-    display: block;
-    transform: rotate(-45deg);
-}
-
-.element input:checked:hover~ label svg {
+/* .element input:checked:hover~label svg {
     display: block;
     transform: none;
-}
+} */
 
 
 .element label svg {
@@ -177,4 +194,10 @@ body {
     fill: #BF6C7D;
     margin-left: auto;
     display: none;
+}
+
+.element__wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
