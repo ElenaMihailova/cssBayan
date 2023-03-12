@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>cssBayan</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__logo logo">
+        <a class="logo__link link" href="https://github.com/ElenaMihailova">
+          <p class="logo__text">by Elena Mihailova</p>
+          <img class="logo__img" src="./image/ava.jpg" width="50" height="50" alt="Логотип">
+        </a>
+      </div>
+      <div class="header__copyright copyright">
+        <a class="copyright__link link" href="https://vk.com/mushroomova">
+          <p class="copyright__text">Классные картинки нарисовала <span>Mushroomova</span></p>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="main__container container">
+      <div class="main__content bayan">
+        <h1 class="bayan__title">CSS bayan</h1>
+        <div class="bayan__wrap">
+
+          <label for="acc1" class="bayan__element element">
+            <input id="acc1" class="element__input visually-hidden" name="accordion2" type="radio" checked>
+            <span class="element__wrap">
+              <span>Отстань от себя
+                <svg class="element__icon">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </span>
+              <img class="element__img" src="./image/img1.jpg" alt="Картинка с лягушкой" width="270" height="250">
+            </span>
+          </label>
+
+          <label for="acc2" class="bayan__element element">
+            <input id="acc2" class="element__input visually-hidden" name="accordion2" type="radio">
+            <span class="element__wrap">
+              <span>Зачем всем нравиться?
+                <svg class="element__icon">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </span>
+              <img class="element__img" src="./image/img2.jpg" alt="Картинка с лягушкой" width="270" height="250">
+            </span>
+          </label>
+
+          <label for="acc3" class="bayan__element element">
+            <input id="acc3" class="element__input visually-hidden" name="accordion2" type="radio">
+            <span class="element__wrap">
+              <span>Делай напуганным
+                <svg class="element__icon">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </span>
+              <img class="element__img" src="./image/img3.jpg" alt="Картинка с лягушкой" width="270" height="250">
+            </span>
+          </label>
+
+          <label for="acc4" class="bayan__element element">
+            <input id="acc4" class="element__input visually-hidden" name="accordion2" type="radio">
+            <span class="element__wrap">
+              <span>Пробуй новое
+                <svg class="element__icon">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </span>
+              <img class="element__img" src="./image/img4.jpg" alt="Картинка с лягушкой" width="270" height="250">
+            </span>
+          </label>
+
+          <label for="acc5" class="bayan__element element">
+            <input id="acc5" class="element__input visually-hidden" name="accordion2" type="radio">
+            <span class="element__wrap">
+              <span>Дружи с собой
+                <svg class="element__icon">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </span>
+              <img class="element__img" src="./image/img5.jpg" alt="Картинка с лягушкой" width="270" height="250">
+            </span>
+          </label>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <svg class="visually-hidden">
+    <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="icon-close">
+      <path d="M5 12h14m-7-7v14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+  </symbol>
+  </svg>
+</body>
+
+</html>
