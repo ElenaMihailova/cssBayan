@@ -25,13 +25,11 @@ html {
 
 body {
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    line-height: 22px;
     background-color: #FED7C6;
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    color: #BF6C7D;
+    color: #8c6cbf;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -52,24 +50,25 @@ body {
 }
 
 .container {
-    padding: 20px;
+    padding: 5vw;
+    padding-bottom: 2vw;
     max-width: 1180px;
     margin: 0 auto;
 }
 
 .link {
     text-decoration: none;
-    color: inherit;
+    color: #BF6C7D;
 }
 
 .element {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #BF6C7D;
+    padding-top: 1vw;
+    padding-bottom: 0;
+    border-bottom: calc(1vh/4) solid #BF6C7D;
 }
 
 .element:first-of-type {
-    border-top: 2px solid #BF6C7D;
+    border-top: calc(1vh/4) solid #BF6C7D;
 }
 
 label {
@@ -77,6 +76,8 @@ label {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    padding: 2vw;
+    row-gap: 1vw;
 }
 
 .bayan {
@@ -87,12 +88,11 @@ label {
 
 .bayan__title {
     font-size: 24px;
-    margin-bottom: 30px;
-
-    /* @media (max-width: 768px) {
-        font-size: 50px;
-    } */
+    margin-bottom: 2vw;
+    cursor: pointer;
+    color: #BF6C7D;
 }
+
 
 .bayan__wrap {
     width: 100%;
@@ -117,7 +117,7 @@ label {
 }
 
 .logo__text {
-    margin-right: 30px;
+    margin-right: 2vw;
     transition: color 0.6s;
 }
 
@@ -140,7 +140,7 @@ label {
 }
 
 .element__wrap {
-    font-size: 24px;
+    font-size: 1em;
     line-height: 1.5;
     font-weight: 700;
     display: flex;
@@ -156,10 +156,9 @@ label {
 .element__img {
     height: 0;
     overflow: hidden;
-    transition: height 0.3s;
     display: flex;
     align-items: center;
-    transition: opacity 0.6s;
+    transition: opacity 0.6s, height 0.3s;
 }
 
 .element__img:hover {
@@ -170,22 +169,9 @@ label {
     height: 100%;
 }
 
-/* label:hover .element__img {
-    height: 300px;
-} */
-
-/* label:hover .element__wrap svg {
-    display: block;
-} */
-
 .element__input:checked~.element__wrap svg {
-    display: block;
+    opacity: 1;
 }
-
-/* .element input:checked:hover~label svg {
-    display: block;
-    transform: none;
-} */
 
 
 .element label svg {
@@ -193,7 +179,10 @@ label {
     height: 24px;
     fill: #BF6C7D;
     margin-left: auto;
-    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    transform: rotate(-45deg);
+    flex-shrink: 0;
 }
 
 .element__wrap {
@@ -202,11 +191,36 @@ label {
     align-items: center;
 }
 
+.bayan:hover .element__wrap {
+    color: #BF6C7D;
+}
+
 .bayan:hover .element__wrap svg {
-    display: block;
-    transform: rotate(-45deg);
+    opacity: 1;
+    transform: none;
 }
 
 .bayan:hover .element__input:checked+.element__wrap svg {
-    transform: none;
+    transform: rotate(-45deg);
+}
+
+.element__input:checked+.element__wrap {
+    color: #BF6C7D
+}
+
+@media (min-width: 820px) {
+    .bayan__title {
+        font-size: 32px;
+    }
+
+    .element__wrap {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1080px) {
+
+    label:hover .element__img {
+        height: 100%;
+    }
 }
