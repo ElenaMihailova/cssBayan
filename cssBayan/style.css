@@ -64,20 +64,12 @@ body {
 .element {
     padding-top: 1vw;
     padding-bottom: 0;
+    display: block;
     border-bottom: calc(1vh/4) solid #BF6C7D;
 }
 
 .element:first-of-type {
     border-top: calc(1vh/4) solid #BF6C7D;
-}
-
-label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    padding: 2vw;
-    row-gap: 1vw;
 }
 
 .bayan {
@@ -135,37 +127,40 @@ label {
     transition: color 0.6s;
 }
 
-.element__input {
-    display: none;
-}
-
 .element__wrap {
-    font-size: 1em;
-    line-height: 1.5;
-    font-weight: 700;
-    display: flex;
     align-items: center;
     width: 100%;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    row-gap: 1vw;
 }
 
-.element__img img {
-    border-radius: 30%;
+.element__wrap span {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 700;
 }
 
 .element__img {
+    border-radius: 30%;
+    aspect-ratio: 270/250;
     height: 0;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    transition: opacity 0.6s, height 0.3s;
+    transition: height 0.5s;
+
 }
 
 .element__img:hover {
     opacity: 0.5;
 }
 
-.element__input:checked~.element__img {
+input:checked~.element__wrap .element__img {
     height: 100%;
 }
 
@@ -174,14 +169,12 @@ label {
 }
 
 
-.element label svg {
-    width: 24px;
-    height: 24px;
-    fill: #BF6C7D;
-    margin-left: auto;
+.element__icon {
+    width: 36px;
+    height: 36px;
+    stroke: #BF6C7D;
     opacity: 0;
     transition: opacity 0.3s;
-    transform: rotate(-45deg);
     flex-shrink: 0;
 }
 
@@ -204,8 +197,20 @@ label {
     transform: rotate(-45deg);
 }
 
+.element__input:checked+.element__wrap svg {
+    transform: rotate(-45deg);
+}
+
 .element__input:checked+.element__wrap {
     color: #BF6C7D
+}
+
+.element:hover .element__img {
+    height: 100%;
+}
+
+.element:hover .element__wrap svg {
+    transform: rotate(-45deg);
 }
 
 @media (min-width: 820px) {
@@ -218,9 +223,4 @@ label {
     }
 }
 
-@media (min-width: 1080px) {
-
-    label:hover .element__img {
-        height: 100%;
-    }
-}
+@media (min-width: 1080px) {}
